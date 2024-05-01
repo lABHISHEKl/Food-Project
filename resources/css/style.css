@@ -1,0 +1,595 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /*  Defines width and height of element  */
+}
+
+html, 
+body
+{
+    background-color: #ffffff;
+    color: #555;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility; /* Tunes the text over speed  */
+    background-color: #ffffff;
+    overflow-x: hidden;
+
+
+}
+
+.row   /* Class: row  */ 
+{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header
+{
+    background-image:  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)) ,url("../img/hero.jpg");
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+h1
+{
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    color: #fff;
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3.5px;
+}
+
+.hero-text-box
+{
+    position: absolute;
+    width: 1140px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.btn:link, /* THE LINK IN THE HEADER  */
+.btn:visited,
+input[type=submit]
+{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,  /* I am Hungry link of Header */
+input[type=submit]
+{
+    background-color: #e67e22;
+    color: #fff;
+    border: 1px solid #e67e22;
+    margin-right: 25px;
+    border-radius: 200px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited /* Show me More Link of Header */
+{
+    border: 1px solid;
+    color: #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]
+{
+    background-color: #cf6d17;
+}
+
+.btn-ghost:hover,       /* Hover effect for Show me more link */
+.btn-ghost:active
+{
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+.btn-full:hover,    /* Hover effect for I am Hungry link */
+.btn-full:active,
+input[type=submit]
+{
+    border: 1px solid #cf6d17;
+}
+
+.logo
+{
+    height: 130px;
+    width: auto;
+    float: left;
+    margin-top: 30px;
+}
+
+.main-nav       /* NAV BAR */ 
+{
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.main-nav li  /* NAV BAR LI */ 
+{
+    display: inline-block;
+    margin-left: 35px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited      /*  NAV BAR LI A */
+{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    padding: 8px 0;
+    transition: border-bottom 0.2s;
+}
+
+
+.main-nav li a:hover,
+.main-nav li a:active
+{
+    border-bottom: 2px solid #c67e22;
+    padding: 8px 0;     /* GIVES PADDING FOR LINK UNDERLINE */
+}
+
+
+section
+{
+    padding: 80px 0;
+}
+
+h2 /* THE HEADING INSIDE SECTION TAG */
+{
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+
+h2::after
+{
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+.long-copy
+{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box    /* The FOUR COLUMNS */
+{
+    padding: 1%;
+}
+
+h3  /* HEADINGS INSIDE ALL 4 COLUMN DIV */
+{
+    font-weight: 300;
+    font-size: 110%;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.box p     /* THE <p> tag INSIDE ALL 4 COLUMN DIV */
+{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+.icon-big /* ICONS  ON ALL 4 COLUMN DIV */
+{
+    font-size: 350%;
+    display: block;
+    color: #e89324;
+    margin-bottom: 10px;
+}
+
+
+.meals-showcase  /* THE <ul> of SECOND SECTION */
+{
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li  /* THE <li> of SECOND SECTION */
+{
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo /* THE <figure> tag INSIDE <ul> OF SECOND SECTION */
+{
+    width: 100%;
+    margin: 1;
+    overflow: hidden;
+    background-color: #000;
+    transition: transform 0.5s, opacity 0.5s;
+    
+}
+
+.meal-photo img /* THE <img> tag inside <figure> tag INSIDE <ul> OF SECOND SECTION */
+{
+    width: 100%;
+    height: auto; 
+    transform: scale(1.15);
+    opacity: 0.7;
+}
+
+.meal-photo img:hover   /* this will add hovering effect, zooming out when hovered, and making the opacity as lighter */ 
+{
+    transform: scale(1.02);
+    opacity: 1;
+}
+
+
+.clear-fix {zoom:1}
+
+.clear-fix::after 
+{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+.section-meals /* SECOND SECTION */
+{
+    padding: 0; /* for reduccing the gap between this section and the 4 columns above */
+}
+
+.section-features .long-copy /* To add space between the <h2> and <icons> */
+{
+    margin-bottom: 30px;
+}
+
+.works-steps /* <div> OF SECTION 3*/
+{
+    margin-bottom: 50px;
+    margin-right: 25px;
+}
+
+.steps-box:first-child
+{
+    text-align: center;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child
+{
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+
+.app-screen
+{
+    width: 40%;
+    float: left;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.works-steps div
+{
+    color: #c67e22;
+    border: 3px solid #c67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.works-steps:last-of-type
+{
+    margin-bottom: 80px;
+}
+
+.btn-app img /* The image of play store and app store */
+{
+    height: 50px;
+    width: auto;
+    margin-right: 15px;
+}
+
+
+.btn-app:link,      /* Removing the border at bottom, because later in the code, we have modified the code for <a> tag which targets this element too */
+.btn-app:visited
+{
+    border-bottom: 0;
+}
+
+
+.section-steps  /* Section 3 */
+{
+    background-color: #f4f4f4;
+}
+
+
+.box img    /* The four city images */
+{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature
+{
+    margin-bottom: 10px;
+}
+
+.icon-small
+{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #c67e22;
+    font-size: 120%;
+    line-height: 245%;
+    margin-top: -5px;
+}
+
+a:link,
+a:visited
+{
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 0.7px solid #c67e22;
+    padding-bottom: 1px;
+}
+
+a:hover,
+a:active
+{
+    color: #555;
+    border-bottom: 0.7px solid transparent;
+    transition: border-bottom 0.5s, color 0.5s;
+}
+
+
+
+.section-testimonials   /* Section 4 */
+{
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../css/img/back-customers.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+
+blockquote
+{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    margin-top: 40px;
+    position: relative;
+}
+
+cite
+{
+    font-size: 95%;
+    display: block;
+    margin-top: 25px;
+}
+
+cite img
+{
+    height: 65px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+blockquote::before
+{
+    content: '\201C';
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -3px;
+}
+
+
+.section-plans /* Section 6*/
+{
+    background-color: #f4f4f4;
+}
+
+.plan-box /* Every major <div> of Section 6 */
+{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.plan-box div /* Sub div of Major div of Section 6 */
+{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-price /* The price tag  */
+{
+    font-size: 250%;
+    margin-bottom: 10px;
+    font-weight: 200;
+    color: #c67e22;
+}
+
+.plan-price-meal
+{
+    font-size: 85%;
+}
+
+.plan-price span /* Price "/month" styling */
+{
+    font-size: 40%;
+    font-weight: 300;
+}
+
+.plan-box ul /* <ul> of the Price div */
+{
+    list-style: none;
+}
+
+.plan-box ul li
+{
+    padding: 5px 0;
+}
+
+.plan-box div:last-child
+{
+    border: 0;
+    text-align: center;
+}
+
+.plan-box div:first-child
+{
+    background-color: #fcfcfc;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.contact-form
+{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea
+{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1.5px solid #ccc;
+}
+
+textarea
+{
+    height: 40%;
+}
+
+input[type=checkbox]
+{
+    margin: 10px 5px 10px 0;
+}
+
+
+footer
+{
+    background-color: #333;
+    font-size: 80%;
+    padding: 50px;
+}
+
+.footer-nav
+{
+    list-style: none;
+    float: left;
+}
+
+.social-links
+{
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li
+{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li a:link,
+.footer nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited
+{
+    text-decoration: none;
+    border: 0;
+    color: #888
+}
+
+
+.footer-nav li a:hover,
+.footer nav li a:active
+{
+    color: #ddd;
+}
+
+footer p
+{
+    color: #888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 20px;
+}
+
+.fb:hover /* Facebook logo */
+{
+    color: #3b5983;
+}
+
+.twitter:hover /* Twitter logo */
+{
+    color: #00aced;
+}
+
+.google:hover /* Google logo */
+{
+    color: #dd4b39;
+}
+
+.insta:hover /* Insta logo */
+{
+    color: #517Fa7;
+}
+
+.social-links li a:link,
+.social-links li a:visited
+{
+    font-size: 160%;
+}
